@@ -33,8 +33,8 @@ function openImage(event) {
     `<img src="${bigImage}" width="800" height="800" >`,
 
     {
-      onShow: modalGallery => { window.addEventListener('keydown', onEscKeyPress) },
-      onClose: modalGallery => { window.removeEventListener('keydown', onEscKeyPress) },
+      onShow: modalGallery => { document.addEventListener('keydown', onEscKeyPress) },
+      onClose: modalGallery => { document.removeEventListener('keydown', onEscKeyPress) },
     }
   );
   function onEscKeyPress(event) {
